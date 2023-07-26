@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:background="@drawable/row_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:id="@+id/circleBridge"
+        android:layout_width="5dp"
+        android:layout_height="0dp"
+        android:background="@drawable/dotted_bridge"
+        app:layout_constraintStart_toStartOf="@id/topHalfCircle"
+        app:layout_constraintEnd_toEndOf="@id/bottomHalfCircle"
+        app:layout_constraintTop_toBottomOf="@+id/topHalfCircle"
+        app:layout_constraintBottom_toTopOf="@id/bottomHalfCircle"/>
+
+    <View
+        android:id="@+id/topHalfCircle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginTop="-25dp"
+        android:background="@drawable/half_circle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:id="@+id/rightHalfCircle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="-25dp"
+        android:background="@drawable/half_circle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:id="@+id/bottomHalfCircle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="-25dp"
+        android:background="@drawable/half_circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/percentOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="100% OFF"
+        android:rotation="-90"
+        android:layout_marginEnd="20dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#4CAF50"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/couponCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Code: DFJEH25DG5!"
+        android:padding="8dp"
+        android:layout_margin="16dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:background="@drawable/code_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/couponCodeDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="25-July"
+        app:layout_constraintStart_toStartOf="@id/couponCode"
+        app:layout_constraintTop_toBottomOf="@id/couponCode"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/couponCodeRedeem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Once the coupon used can't use again."
+        app:layout_constraintStart_toStartOf="@id/couponCode"
+        app:layout_constraintTop_toBottomOf="@id/couponCodeDate"
+        app:layout_constraintEnd_toStartOf="@id/bottomHalfCircle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <View
+        android:id="@+id/redeemedBanner"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#16000000"
+        android:rotation="-35"
+        app:layout_constraintStart_toStartOf="@id/topHalfCircle"
+        app:layout_constraintEnd_toEndOf="@id/bottomHalfCircle"
+        app:layout_constraintTop_toBottomOf="@+id/topHalfCircle"
+        app:layout_constraintBottom_toTopOf="@id/bottomHalfCircle"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="-35"
+        android:text="REDEEMED"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
