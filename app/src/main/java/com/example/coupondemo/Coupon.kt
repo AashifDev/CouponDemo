@@ -9,11 +9,11 @@ data class Coupon(
 
 fun getCouponDetail(): ArrayList<Coupon>{
     val coupon = ArrayList<Coupon>()
-    coupon.add(Coupon("SDFDF21D5F", "65%","25-JUNE", true))
-    coupon.add(Coupon("DFGFGFG656", "25%","13-MAY", false))
-    coupon.add(Coupon("GVBEHD4@#F", "60%","17-APR", false))
-    coupon.add(Coupon("KMHFFJ526&", "50%","28-JAN", true))
-    coupon.add(Coupon("SDFDF21D5F", "16%","20-JUNE",false))
-    coupon.add(Coupon("NHFG&%$#JD", "45%","19-DEC",true))
+    coupon.add(Coupon("Code: SDFDF21D5F", "65% OFF","25-JUNE", true))
+    coupon.add(Coupon("Code: DFGFGFG656", "25% OFF","13-MAY", false))
+    coupon.add(Coupon("Code: GVBEHD4@#F", "60% OFF","17-APR", false))
+    coupon.add(Coupon("Code: KMHFFJ526&", "50% OFF","28-JAN", true))
+    coupon.add(Coupon("Code: SDFDF21D5F", "16% OFF","20-JUNE",false))
+    coupon.add(Coupon("Code: NHFG&%$#JD", "45% OFF","19-DEC",true))
     return coupon
 }

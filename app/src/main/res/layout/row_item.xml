@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="6dp"
     android:background="@drawable/row_background"
+    android:id="@+id/mainLayout"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <View
@@ -60,6 +61,16 @@
         android:textColor="#4CAF50"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_offer"
+        android:alpha=".1"
+        android:layout_marginTop="-20dp"
+        android:layout_marginStart="-30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/couponCode"
         android:layout_width="wrap_content"
@@ -98,27 +109,40 @@
         android:layout_marginBottom="16dp"
         android:layout_marginTop="16dp"/>
 
-    <View
-        android:id="@+id/redeemedBanner"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/couponStatus"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="#16000000"
-        android:rotation="-35"
-        app:layout_constraintStart_toStartOf="@id/topHalfCircle"
-        app:layout_constraintEnd_toEndOf="@id/bottomHalfCircle"
-        app:layout_constraintTop_toBottomOf="@+id/topHalfCircle"
-        app:layout_constraintBottom_toTopOf="@id/bottomHalfCircle"/>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:rotation="-35"
-        android:text="REDEEMED"
-        android:textColor="@android:color/holo_red_dark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
 
+        <View
+            android:id="@+id/redeemedBanner"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="#16000000"
+            android:rotation="-35"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="-35"
+            android:text="REDEEMED"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@android:color/holo_red_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
