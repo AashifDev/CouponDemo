@@ -13,9 +13,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         rv = findViewById(R.id.rv)
-        val getCoupon = getCouponDetail()
 
-        adapter = CouponAdapter(getCoupon)
+        adapter = CouponAdapter()
+        adapter.submitList(getCouponDetail())
         rv.adapter = adapter
 
     }
